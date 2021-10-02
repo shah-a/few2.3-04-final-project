@@ -1,5 +1,7 @@
 # FEW 2.3: Final Project
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/084e7680-8414-485f-8047-88a1168b9410/deploy-status)](https://app.netlify.com/sites/gosort/deploys)
+
 ## Notes to self:
 
 Actions:
