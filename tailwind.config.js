@@ -1,11 +1,14 @@
 module.exports = {
+  mode: 'jit',
   purge: ['./index.html', './src/**/*.{js,jsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
   },
   variants: {
-    extend: {},
+    extend: {
+      // animation: ['hover', 'motion-safe'],
+    },
   },
   plugins: [],
 };
