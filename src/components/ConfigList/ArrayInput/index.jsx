@@ -17,12 +17,21 @@ const ArrayInput = () => {
           onChange={(e) => setSlider(e.target.value)}
         />
       </label>
-      <button type="button" id="generate-button" className="config-button">Generate Random Numbers</button>
-      <button type="button" id="clear-button" className="config-button">Clear All</button>
+      <div className="space-x-1">
+        <button type="button">Generate Random Numbers</button>
+        <button type="button">Clear All</button>
+      </div>
       <p>
         (Or manually enter
         {' '}
-        <a className="link" target="_blank" href="https://www.random.org/integer-sets/" rel="noreferrer">your own</a>
+        <a
+          href="https://www.random.org/integer-sets/"
+          target="_blank"
+          rel="noreferrer"
+          className="hover:text-blue-900 transition-colors"
+        >
+          your own
+        </a>
         )
       </p>
     </div>
