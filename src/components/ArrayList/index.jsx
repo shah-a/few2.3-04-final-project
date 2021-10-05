@@ -1,7 +1,7 @@
 import Array from './Array';
 
 const ArrayList = () => (
-  <section className="ArrayList w-full outline space-y-3">
+  <section className="ArrayList w-full outline">
     <Array />
     <Array />
     <Array />
