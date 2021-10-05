@@ -3,7 +3,7 @@ import ArrayInput from './ArrayInput';
 import AlgoSelectList from './AlgoSelectList';
 
 const ConfigList = () => (
-  <section className="ConfigList w-full">
+  <section className="ConfigList w-full space-y-3 text-center">
     <div className="outline">
       <h2>Configuration</h2>
     </div>
