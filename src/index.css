@@ -54,6 +54,10 @@
     -moz-appearance: none;
     @apply w-4 h-4 border-none rounded-full bg-gray-50 hover:bg-gray-200 transition-colors cursor-pointer;
   }
+
+  select, option {
+    @apply text-sm font-light;
+  }
 }
 
 @layer utilities {
