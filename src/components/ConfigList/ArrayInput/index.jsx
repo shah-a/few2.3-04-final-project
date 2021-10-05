@@ -17,7 +17,7 @@ const ArrayInput = () => {
           onChange={(e) => setSlider(e.target.value)}
         />
       </label>
-      <div className="space-x-1">
+      <div className="flex flex-col items-center space-y-1">
         <button type="button">Generate Random Numbers</button>
         <button type="button">Clear All</button>
       </div>
