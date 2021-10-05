@@ -5,7 +5,7 @@
 @layer base {
   body {
     font-family: 'Roboto', sans-serif;
-    @apply font-light;
+    @apply font-light text-gray-50;
   }
 
   h1 {
@@ -18,6 +18,12 @@
 
   h3 {
     @apply text-xl font-light;
+  }
+}
+
+@layer components {
+  .outline {
+    @apply border rounded-md;
   }
 }
 
