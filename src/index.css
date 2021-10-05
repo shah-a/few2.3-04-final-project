@@ -23,7 +23,11 @@
 
 @layer components {
   .outline {
-    @apply border rounded-md;
+    @apply border rounded-md px-8 py-4;
+  }
+
+  button {
+    @apply px-6 py-1 font-bold text-blue-500 bg-gray-50 hover:bg-gray-200 transition-colors rounded-sm;
   }
 }
 
