@@ -27,8 +27,8 @@ export const generateArrayValues = (arrayCount, arrayLength) => async (dispatch,
   arrays.forEach((array, index) => {
     if (array.visible) {
       let value = '';
-
-      for (let i = 0; i < arrayLength - 1; i += 1) {
+      const arrLen = parseInt(arrayLength, 10);
+      for (let i = 0; i < arrLen - 1; i += 1) {
         const num = Math.floor(Math.random() * 500);
         value += `${num}, `;
       }
