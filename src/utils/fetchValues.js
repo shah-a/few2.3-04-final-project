@@ -32,11 +32,16 @@ const fetchValues = async (arrayCount, arrayLength) => {
   });
 
   const res = await fetch(urlBase, { method, headers, body });
-
   if (!res.ok) {
     return [null, new Error(res.status)];
   }
-  return [await res.json(), null];
+
+  const data = await res.json();
+  if (data.error) {
+    return [null, new Error(data.error.message)];
+  }
+
+  return [data.result.random.data, null];
 };
 
 export default fetchValues;
