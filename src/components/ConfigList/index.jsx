@@ -14,8 +14,15 @@ const ConfigList = () => {
       <div className="outline">
         <h2>Configuration</h2>
       </div>
-      <ArrayCount arrayCount={arrayCount} setArrayCount={setArrayCount} />
-      <ArrayInput arrayLength={arrayLength} setArrayLength={setArrayLength} />
+      <ArrayCount
+        arrayCount={arrayCount}
+        setArrayCount={setArrayCount}
+      />
+      <ArrayInput
+        arrayCount={arrayCount}
+        arrayLength={arrayLength}
+        setArrayLength={setArrayLength}
+      />
       <AlgoSelectList />
       <div className="outline">
         <button
