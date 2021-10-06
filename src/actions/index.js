@@ -1,5 +1,6 @@
 export const UPDATE_ARRAY_VALUE = 'UPDATE_ARRAY_VALUE';
 export const UPDATE_ARRAY_VISIBILITY = 'UPDATE_ARRAY_VISIBILITY';
+export const UPDATE_ARRAY_ALGO = 'UPDATE_ARRAY_ALGO';
 
 export const updateArrayValue = (index, value) => ({
   type: UPDATE_ARRAY_VALUE,
@@ -9,4 +10,9 @@ export const updateArrayValue = (index, value) => ({
 export const updateArrayVisibility = (count) => ({
   type: UPDATE_ARRAY_VISIBILITY,
   payload: { count },
+});
+
+export const updateArrayAlgo = (index, algo) => ({
+  type: UPDATE_ARRAY_ALGO,
+  payload: { index, algo },
 });
