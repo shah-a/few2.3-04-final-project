@@ -10,16 +10,13 @@ What are all the state-changing actions a user can perform?
 - [x] Slide the ArrayCount slider
   - [x] Should affect visibility of arrays and algoselects
 - [x] Change the algorithms
-- [ ] Slide the ArrayInput slider
-- [ ] Click the Generate Random Numbers button
-- [ ] Click the Clear All button
+- [x] Slide the ArrayInput slider
+- [x] Click the Generate Random Numbers button
+- [x] Click the Clear All button
 - [x] Click Start button
 
-What reducer might look like:
+## Next steps
 
-[{
-id: #,
-values: [],
-algorithm: algo,
-count: len, // optional
-}]
+- [ ] Use Random.org API for inputs generator
+  - (look into Netlify functions for this; config can be set up in `netlify.toml`)
+- [ ] Implement backend (Go)
