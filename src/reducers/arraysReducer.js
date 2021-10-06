@@ -1,4 +1,4 @@
-import { UPDATE_ARRAY_VALUE } from '../actions';
+import { UPDATE_ARRAY_VALUE, UPDATE_ARRAY_VISIBILITY } from '../actions';
 
 /*
  * Note:
@@ -58,10 +58,17 @@ const arraysReducer = (state = initialState, action) => {
   switch (action.type) {
     case UPDATE_ARRAY_VALUE:
       return newState.map((array, index) => {
-        if (action.payload.index === index) {
+        if (index === action.payload.index) {
           return { ...array, value: action.payload.value };
         }
         return { ...array };
+      });
+    case UPDATE_ARRAY_VISIBILITY:
+      return newState.map((array, index) => {
+        if (index < action.payload.count) {
+          return { ...array, visible: true };
+        }
+        return { ...array, visible: false };
       });
     default:
       return state;

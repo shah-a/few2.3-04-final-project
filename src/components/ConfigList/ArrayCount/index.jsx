@@ -1,7 +1,10 @@
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { updateArrayVisibility } from '../../../actions';
 
 const ArrayCount = () => {
   const [slider, setSlider] = useState(3);
+  const dispatch = useDispatch();
 
   return (
     <div className="ArrayCount outline">
@@ -14,7 +17,10 @@ const ArrayCount = () => {
           max="5"
           step="1"
           value={slider}
-          onChange={(e) => setSlider(e.target.value)}
+          onChange={(e) => {
+            setSlider(e.target.value);
+            dispatch(updateArrayVisibility(e.target.value));
+          }}
         />
       </label>
     </div>
