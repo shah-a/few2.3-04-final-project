@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { updateArray } from '../../../actions';
+import { updateArrayValue } from '../../../actions';
 
 const Array = ({ index, placeholder, value }) => {
   const dispatch = useDispatch();
@@ -13,7 +13,7 @@ const Array = ({ index, placeholder, value }) => {
           placeholder={placeholder}
           value={value}
           className="w-full p-2 text-black text-xs leading-snug font-mono font-light"
-          onChange={(e) => dispatch(updateArray(index, e.target.value))}
+          onChange={(e) => dispatch(updateArrayValue(index, e.target.value))}
         />
       </label>
     </div>

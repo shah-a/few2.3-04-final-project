@@ -1,11 +1,11 @@
-const UPDATE_ARRAY = 'UPDATE_ARRAY';
+const UPDATE_ARRAY_VALUE = 'UPDATE_ARRAY_VALUE';
 
-const updateArray = (index, value) => ({
-  type: UPDATE_ARRAY,
+const updateArrayValue = (index, value) => ({
+  type: UPDATE_ARRAY_VALUE,
   payload: { index, value },
 });
 
 export {
-  UPDATE_ARRAY,
-  updateArray,
+  UPDATE_ARRAY_VALUE,
+  updateArrayValue,
 };
