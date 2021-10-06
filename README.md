@@ -4,13 +4,15 @@
 
 ## Notes to self:
 
-Actions:
-- Add/remove array
-- Generate numbers
-- Clear numbers
-- Change number of arrays
-- Change number of items in arrays
-- Change a sorting algorithm
+What are all the state-changing actions a user can perform?
+
+- Manually enter array numbers
+- Slide the ArrayCount slider
+  - Should affect visibility of arrays and algoselects
+- Slide the ArrayInput slider
+- Click the Generate Random Numbers button
+- Click the Clear All button
+- Click Start button
 
 What reducer might look like:
 
