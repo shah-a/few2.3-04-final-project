@@ -8,7 +8,7 @@ const ArrayList = () => {
     if (array.visible) {
       return (
         <Array
-          key={array.id}
+          key={`array-${array.id}`}
           index={index}
           placeholder={array.placeholder}
           value={array.value}

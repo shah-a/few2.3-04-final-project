@@ -7,7 +7,7 @@ const Array = ({ index, placeholder, value }) => {
   return (
     <div className="Array">
       <label>
-        <h2 className="mb-3">{`Array #${index + 1}`}</h2>
+        <h2 className="mb-3">{`Array #${index + 1}:`}</h2>
         <textarea
           rows="7"
           placeholder={placeholder}

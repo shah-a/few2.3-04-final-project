@@ -7,8 +7,8 @@
 What are all the state-changing actions a user can perform?
 
 - [x] Manually enter array numbers
-- [ ] Slide the ArrayCount slider
-  - [ ] Should affect visibility of arrays and algoselects
+- [x] Slide the ArrayCount slider
+  - [x] Should affect visibility of arrays and algoselects
 - [ ] Slide the ArrayInput slider
 - [ ] Click the Generate Random Numbers button
 - [ ] Click the Clear All button
