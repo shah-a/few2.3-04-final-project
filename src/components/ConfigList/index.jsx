@@ -5,8 +5,8 @@ import ArrayInput from './ArrayInput';
 import AlgoSelectList from './AlgoSelectList';
 
 const ConfigList = () => {
-  const [arrayCount, setArrayCount] = useState(3);
-  const [arrayLength, setArrayLength] = useState(275);
+  const [arrayCount, setArrayCount] = useState('3');
+  const [arrayLength, setArrayLength] = useState('275');
   const arrays = useSelector((state) => state.arrays);
 
   return (

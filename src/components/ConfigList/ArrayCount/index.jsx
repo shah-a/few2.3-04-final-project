@@ -17,7 +17,7 @@ const ArrayCount = ({ arrayCount, setArrayCount }) => {
           value={arrayCount}
           onChange={(e) => {
             setArrayCount(e.target.value);
-            dispatch(updateArrayVisibility(e.target.value));
+            dispatch(updateArrayVisibility(parseInt(e.target.value, 10)));
           }}
         />
       </label>
