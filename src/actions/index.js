@@ -1,11 +1,11 @@
-const ACTION = 'ACTION';
+const UPDATE_ARRAY = 'UPDATE_ARRAY';
 
-const action = (val) => ({
-  type: ACTION,
-  payload: { val },
+const updateArray = (index, value) => ({
+  type: UPDATE_ARRAY,
+  payload: { index, value },
 });
 
 export {
-  ACTION,
-  action,
+  UPDATE_ARRAY,
+  updateArray,
 };

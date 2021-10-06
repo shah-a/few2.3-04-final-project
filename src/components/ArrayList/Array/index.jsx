@@ -1,15 +1,23 @@
-const Array = () => (
-  <div className="Array">
-    <label className="array-label">
-      <h2 className="mb-3">Array #1</h2>
-      <textarea
-        rows="7"
-        placeholder="E.g: 39, 71, 37, 87, 69, 48, 49, 45, 85, 63, 23, 13, 26, 76, 56, 99, 17, 1, 81, 25, 18, 15, 20, 68, 31..."
-        // value=""
-        className="w-full p-2 text-black text-xs leading-snug font-mono font-light"
-      />
-    </label>
-  </div>
-);
+import { useDispatch } from 'react-redux';
+import { updateArray } from '../../../actions';
+
+const Array = ({ index, placeholder, value }) => {
+  const dispatch = useDispatch();
+
+  return (
+    <div className="Array">
+      <label>
+        <h2 className="mb-3">{`Array #${index + 1}`}</h2>
+        <textarea
+          rows="7"
+          placeholder={placeholder}
+          value={value}
+          className="w-full p-2 text-black text-xs leading-snug font-mono font-light"
+          onChange={(e) => dispatch(updateArray(index, e.target.value))}
+        />
+      </label>
+    </div>
+  );
+};
 
 export default Array;

@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import stateReducer from './stateReducer';
+import arraysReducer from './arraysReducer';
 
 const rootReducer = combineReducers({
-  state: stateReducer,
+  arrays: arraysReducer,
 });
 
 export default rootReducer;
