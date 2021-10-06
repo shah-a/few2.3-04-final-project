@@ -1,4 +1,6 @@
-import { UPDATE_ARRAY_VALUE, UPDATE_ARRAY_VISIBILITY, UPDATE_ARRAY_ALGO } from '../actions';
+import {
+  UPDATE_ARRAY_VALUE, UPDATE_ARRAY_VISIBILITY, UPDATE_ARRAY_ALGO, CLEAR_ARRAY_VALUES,
+} from '../actions';
 
 /*
  * Note:
@@ -12,6 +14,11 @@ import { UPDATE_ARRAY_VALUE, UPDATE_ARRAY_VISIBILITY, UPDATE_ARRAY_ALGO } from '
  * before hitting the API, though.
  *
  * To be implemented in the future.
+ *
+ * Note:
+ * Don't forget to update `CLEAR_ARRAY_VALUES` action
+ * to reset the initialState of the arrays accordingly
+ * (i.e. empty string or empty array)
  */
 
 const initialState = [
@@ -77,6 +84,8 @@ const arraysReducer = (state = initialState, action) => {
         }
         return { ...array };
       });
+    case CLEAR_ARRAY_VALUES:
+      return newState.map((array) => ({ ...array, value: [] }));
     default:
       return state;
   }
