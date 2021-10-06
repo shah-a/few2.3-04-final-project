@@ -1,3 +1,5 @@
+// import fetchValues from '../utils/fetchValues';
+
 export const UPDATE_ARRAY_VALUE = 'UPDATE_ARRAY_VALUE';
 export const UPDATE_ARRAY_VISIBILITY = 'UPDATE_ARRAY_VISIBILITY';
 export const UPDATE_ARRAY_ALGO = 'UPDATE_ARRAY_ALGO';
@@ -19,8 +21,7 @@ export const updateArrayAlgo = (index, algo) => ({
   payload: { index, algo },
 });
 
-export const generateArrayValues = (arrayLength) => async (dispatch, getState) => {
-  // await new Promise((res, rej) => setTimeout(res, 1500));
+export const generateArrayValues = (arrayCount, arrayLength) => async (dispatch, getState) => {
   const { arrays } = getState();
 
   arrays.forEach((array, index) => {
@@ -37,6 +38,17 @@ export const generateArrayValues = (arrayLength) => async (dispatch, getState) =
     }
   });
 };
+
+// // Alternate method, using random.org:
+// export const generateArrayValues = (arrayCount, arrayLength) => async (dispatch, getState) => {
+//   const [values, err] = await fetchValues(arrayCount, arrayLength);
+//   if (err) {
+//     return alert('Error! Something went wrong.');
+//   }
+//   values.forEach((value, index) => {
+//     dispatch(updateArrayValue(index, value));
+//   });
+// };
 
 export const clearArrayValues = () => ({
   type: CLEAR_ARRAY_VALUES,

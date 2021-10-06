@@ -1,6 +1,6 @@
 /*
  * WARNING:
- * API keys here will be exposed in production builds.
+ * API keys here would be exposed in production builds.
  * For secure transactions, the api call needs to happen
  * on the backend. That functionality is not yet implemented
  * here.
