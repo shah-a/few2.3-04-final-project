@@ -1,9 +1,12 @@
+import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import ArrayCount from './ArrayCount';
 import ArrayInput from './ArrayInput';
 import AlgoSelectList from './AlgoSelectList';
 
 const ConfigList = () => {
+  const [arrayCount, setArrayCount] = useState(3);
+  const [arrayLength, setArrayLength] = useState(275);
   const arrays = useSelector((state) => state.arrays);
 
   return (
@@ -11,8 +14,8 @@ const ConfigList = () => {
       <div className="outline">
         <h2>Configuration</h2>
       </div>
-      <ArrayCount />
-      <ArrayInput />
+      <ArrayCount arrayCount={arrayCount} setArrayCount={setArrayCount} />
+      <ArrayInput arrayLength={arrayLength} setArrayLength={setArrayLength} />
       <AlgoSelectList />
       <div className="outline">
         <button

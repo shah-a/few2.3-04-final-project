@@ -1,9 +1,7 @@
-import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { generateArrayValues, clearArrayValues } from '../../../actions';
 
-const ArrayInput = () => {
-  const [arrayLength, setArrayLength] = useState(275);
+const ArrayInput = ({ arrayCount, arrayLength, setArrayLength }) => {
   const dispatch = useDispatch();
 
   return (
@@ -30,7 +28,7 @@ const ArrayInput = () => {
       <div className="flex flex-col items-center space-y-1">
         <button
           type="button"
-          onClick={() => dispatch(generateArrayValues(arrayLength))}
+          onClick={() => dispatch(generateArrayValues(arrayCount, arrayLength))}
         >
           Generate Random Numbers
         </button>
