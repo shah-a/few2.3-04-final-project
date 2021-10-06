@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { clearArrayValues } from '../../../actions';
+import { generateArrayValues, clearArrayValues } from '../../../actions';
 
 const ArrayInput = () => {
-  const [slider, setSlider] = useState(275);
+  const [arrayLength, setArrayLength] = useState(275);
   const dispatch = useDispatch();
 
   return (
@@ -13,17 +13,14 @@ const ArrayInput = () => {
       {/* ------------ */}
       <h3>How Many Numbers Per Array?</h3>
       <label className="slider">
-        <span>{slider}</span>
+        <span>{arrayLength}</span>
         <input
           type="range"
           min="50"
           max="500"
           step="25"
-          value={slider}
-          onChange={(e) => {
-            console.log('value changed');
-            setSlider(e.target.value);
-          }}
+          value={arrayLength}
+          onChange={(e) => setArrayLength(e.target.value)}
         />
       </label>
 
@@ -33,7 +30,7 @@ const ArrayInput = () => {
       <div className="flex flex-col items-center space-y-1">
         <button
           type="button"
-          onClick={() => console.log('button clicked')}
+          onClick={() => dispatch(generateArrayValues(arrayLength))}
         >
           Generate Random Numbers
         </button>
